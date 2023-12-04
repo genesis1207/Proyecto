@@ -1,0 +1,181 @@
+body {
+
+    background: url(https://img.freepik.com/fotos-premium/fondo-degradado-azul-negro-superposicion-fondo-abstracto-negro-noche-noche-oscura-espacio-texto-fondox9_661047-3177.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    height: auto;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    background-color: #004a4f7e;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #034334;
+    padding: 15px;
+    text-align: center;
+}
+
+header {
+    background-color: #034334;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.navegador ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navegador li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navegador a {
+    text-decoration: double;
+    color: #fff;
+}
+
+.navegador ul li a:hover {
+    background-color: rgba(36, 217, 66, 0.589);
+    /* cuadro de color de menu */
+    padding: 10px;
+}
+
+h1 {
+    color: white;
+}
+
+.form-group {
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #014529;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#error-message {
+    color: red;
+}
+
+/* Estilos para resaltar campos inválidos */
+.invalid-input {
+    border-color: red;
+}
+
+/* Estilo del pie de página */
+.footer {
+    background-color: #034334;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.break {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.direccion,
+.contacto,
+.sobre {
+    flex: 1;
+}
+
+.derechos {
+    margin-top: 20px;
+}
+
+/* Estilos para el formulario */
+.formulario {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Estilos para los campos de entrada y etiquetas */
+.form-group {
+    flex: 0 0 48%;
+    /* Ancho de los campos */
+    margin-bottom: 20px;
+    position: relative;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+input[type="date"] {
+    width: calc(100% - 10px);
+    /* Ajuste para dejar espacio al mensaje de error */
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+
+/* Estilos para el botón */
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}

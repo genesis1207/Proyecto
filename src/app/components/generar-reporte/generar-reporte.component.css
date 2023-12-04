@@ -1,0 +1,242 @@
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    height: 150vh;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    background-color: #004a4f7e;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #034334;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.navegador ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navegador li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navegador a {
+    text-decoration: double;
+    color: #fff;
+}
+
+.navegador ul li a:hover {
+    background-color: rgba(36, 217, 66, 0.589);
+    /* cuadro de color de menu */
+    padding: 10px;
+}
+
+h1 {
+    color: #0d0a53;
+}
+
+.form-group {
+    margin: 10px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #f90505;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#error-message {
+    color: red;
+}
+
+/* Estilos para la lista de reportes */
+.report-list-container {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.report-list-container h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#reportList {
+    list-style: none;
+    padding: 0;
+}
+
+#reportList li {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#reportList li strong {
+    font-weight: bold;
+    color: #333;
+}
+
+#reportList li:not(:last-child) {
+    border-bottom: none;
+}
+
+/* Estilos para resaltar campos inválidos */
+.invalid-input {
+    border-color: red;
+}
+
+/* Estilo del pie de página */
+.footer {
+    background-color: #034334;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.break {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.direccion,
+.contacto,
+.sobre {
+    flex: 1;
+}
+
+.derechos {
+    margin-top: 20px;
+}
+
+.W {
+    color: white
+}
+
+.N {
+    color: black
+}
+
+.report-table-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+.report-form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}

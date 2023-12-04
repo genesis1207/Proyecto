@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Equipo</title>
+    <link rel="stylesheet" href="agregar-equipos.component.css">
+</head>
+
+<body>
+    <!--menu-->
+    <div class="menu">
+        <div class="header">
+            <h1>Gestión de inventario de equipos informáticos</h1>
+            <div class="navegador">
+                <ul>
+                    <li><a href="../logueado/">Inicio</a></li>
+                    <li><a href="../lista-de-equipos/">Listado de Equipos</a></li>
+                    <li><a href="../generar-reporte/">Reportes</a></li>
+                    <li><a href="../contacto/">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Agregar Equipo</h1>
+        <form class="formulario" [formGroup]="myforde" (ngSubmit)="onSubmit()">
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="teamName"><strong>Nombre del Equipo:</strong></label>
+                    <input id="teamName" class="form-control" type="text" formControlName="name">
+                    <span *ngIf="myforde.get('name')?.errors?.['required']" class="error-msg">
+                        Los <strong>nombres</strong> no pueden quedar vacíos
+                    </span>
+                    <span *ngIf="myforde.get('name')?.errors?.['minlength']" class="error-msg">
+                        Debe tener como <strong>mínimo</strong> 5 caracteres
+                    </span>
+                </div>
+                
+                <div class="form-group col">
+                    <label for="serialNumber"><strong>Serial:</strong></label>
+                    <input id="serialNumber" class="form-control" type="number" formControlName="serial" required>
+                    <span *ngIf="myforde.get('serial')?.errors?.['required']" class="error-msg">
+                        La <strong>serial</strong> no puede quedar vacía
+                    </span>
+                </div>
+            </div>
+        
+            <div class="form-row">
+                <div class="form-group col">
+                    <label><strong>Descripción:</strong></label>
+                    <input class="form-control" type="text" formControlName="descripcion" required>
+                    <span *ngIf="myforde.get('descripcion')?.errors?.['required']" class="error-msg">
+                        La <strong>Descripción</strong> no puede quedar vacía
+                    </span>
+                </div>
+        
+                <div class="form-group col">
+                    <label><strong>Fabricante:</strong></label>
+                    <input class="form-control" type="text" formControlName="fabricante" required>
+                    <span *ngIf="myforde.get('fabricante')?.errors?.['required']" class="error-msg">
+                        El <strong>Fabricante</strong> no puede quedar vacío
+                    </span>
+                </div>
+        
+                <div class="form-group col">
+                    <label><strong>Modelo:</strong></label>
+                    <input class="form-control" type="text" formControlName="modelo" required>
+                    <span *ngIf="myforde.get('modelo')?.errors?.['required']" class="error-msg">
+                        El <strong>Modelo</strong> no puede quedar vacío
+                    </span>
+                </div>
+        
+                <div class="form-group col">
+                    <label for="purchaseDate"><strong>Fecha de Compra:</strong></label>
+                    <input type="date" formControlName="fecha" required>
+                    <span *ngIf="myforde.get('fecha')?.errors?.['required']" class="error-msg">
+                        La <strong>Fecha</strong> no puede quedar vacía
+                    </span>
+                </div>
+            </div>
+        
+            <button type="submit" [disabled]="myforde.invalid">Guardar</button>
+        </form>
+        
+        
+    </div>
+        <!--Pie de pagina-->
+        <div class="footer">
+            <div class="break">
+                <div class="direccion">
+                    <h4>Dirección:</h4>
+                    <p>Av. Circunvalacion, Manta</p>
+                </div>
+                <div class="contacto">
+                    <h4>Contactos:</h4>
+                    <p>Tel: +593 123456789</p>
+                    <p>Email: info@uleam.live.edu.ec</p>
+                </div>
+                <div class="sobre">
+                    <h4>Sobre nosotros:</h4>
+                    <p>Somos la Universidad Laica Eloy Alfaro de Manabí, contamos con servico para la gestion de
+                        inventario informatico</p>
+                </div>
+            </div>
+            <div class="derechos">
+                <h4>Universidad Laica Eloy Alfaro de Manabí| Todos los derechos reservados ©</h4>
+            </div>
+        </div>
+
+</body>
+
+</html>

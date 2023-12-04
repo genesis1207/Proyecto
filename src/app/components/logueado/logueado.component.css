@@ -1,0 +1,171 @@
+/* Estilo general de la página */
+body {
+    background: url("https://www.uleam.edu.ec/wp-content/uploads/2023/02/U-1024x683.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1000px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo del encabezado */
+.header {
+    background-color: #034334;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.navegador ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navegador li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navegador a {
+    text-decoration: double;
+    color: #fff;
+}
+
+.navegador ul li a:hover {
+    background-color: rgba(36, 217, 66, 0.589);
+    /* cuadro de color de menu */
+    padding: 10px;
+}
+
+/* Estilo de la sección de Inventario Informático */
+.inventario {
+    padding: 2px;
+    margin-top: 2px;
+}
+
+.inventario h2 {
+    color: #ff5100;
+    font-style: oblique;
+    text-decoration-line: underline;
+}
+
+.menu-inventario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 500px;
+}
+
+.bloque-inventario {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    text-align: center;
+}
+
+.bloque-inventario i {
+    font-size: 48px;
+    color: #1aab03;
+}
+
+.bloque-inventario h4 {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333;
+}
+
+.bloque-inventario hr {
+    background-color: #4CAF50;
+    height: 2px;
+    border: none;
+    margin: 10px auto;
+}
+
+.bloque-inventario p {
+    color: #666;
+}
+
+/* Estilo del pie de página */
+.footer {
+    background-color: #034334;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.break {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.direccion,
+.contacto,
+.sobre {
+    flex: 1;
+}
+
+.derechos {
+    margin-top: 20px;
+}
+
+/* CSS */
+.boton-listado {
+    background-color: #22a111;
+    /* Color de fondo del botón */
+    color: #fff;
+    /* Color del texto del botón */
+    padding: 10px 20px;
+    /* Padding para el espacio interno del botón */
+    border: none;
+    /* Eliminar borde */
+    border-radius: 5px;
+    /* Añadir bordes redondeados */
+    cursor: pointer;
+    /* Cambiar el cursor al pasar sobre el botón */
+    text-decoration: none;
+    /* Eliminar subrayado del enlace */
+}
+
+.boton-listado a {
+    color: #fff;
+    /* Color del texto del botón */
+    text-decoration: none;
+    /* Eliminar subrayado del enlace */
+}
+
+.boton-listado:hover {
+    background-color: #227916;
+    /* Cambiar color de fondo al pasar el mouse sobre el botón */
+}
+
+.link {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font: inherit;
+    text-align: inherit;
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    margin: 0;
+}
+
+.link strong {
+    font-weight: bold;
+}

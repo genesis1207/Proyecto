@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de inventario ULEAM</title>
+    <link rel="stylesheet" href="logueado.component.css">
+</head>
+
+<body>
+    <!--menu-->
+    <div class="menu">
+        <div class="header">
+            <h1>Gestión de inventario de equipos informáticos</h1>
+            <div class="navegador">
+                <ul>
+                    <li><a href="../lista-de-equipos/">Listado de Equipos</a></li>
+                    <li><a href="../agregar-equipos/">Agregar Equipos</a></li>
+                    <li><a href="../generar-reporte/">Reportes</a></li>
+                    <li><a href="../contacto/">Contacto</a></li>
+                    <button class="link" type="button" routerLink="/login" (click)="onClick()">
+                        <strong>LOGOUT</strong>
+                    </button>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Sección de Inventario Informático -->
+    <div class="inventario">
+        <h2>Universidad Laica Eloy Alfaro de Manabí (Uleam)</h2>
+        <div class="menu-inventario">
+            <div class="bloque-inventario">
+                <i class=""></i>
+                <button class="boton-listado"><a href="../lista-de-equipos/">Listado de Equipos</a></button>
+                <hr>
+                <p>Consulta y gestiona tu inventario de equipos informáticos.</p>
+            </div>
+
+            <div class="bloque-inventario">
+                <i class=""></i>
+                <button class="boton-listado"><a href="../agregar-equipos/">Agregar Equipo</a></button>
+                <hr>
+                <p>Añade nuevos equipos al inventario informático.</p>
+            </div>
+
+            <div class="bloque-inventario">
+                <i class=""></i>
+                <button class="boton-listado"><a href="../generar-reporte/">Reportes</a></button>
+                <hr>
+                <p>Genera reportes de tus equipos informático.</p>
+            </div>
+        </div>
+    </div>
+    <!--Pie de pagina-->
+    <div class="footer">
+        <div class="break">
+            <div class="direccion">
+                <h4>Dirección:</h4>
+                <p>Av. Circunvalacion, Manta</p>
+            </div>
+            <div class="contacto">
+                <h4>Contactos:</h4>
+                <p>Tel: +593 123456789</p>
+                <p>Email: info&#64;uleam.live.edu.ec</p>
+            </div>
+            <div class="sobre">
+                <h4>Sobre nosotros:</h4>
+                <p>Somos la Universidad Laica Eloy Alfaro de Manabí, contamos con servico para la gestion de inventario
+                    informatico</p>
+            </div>
+        </div>
+        <div class="derechos">
+            <h4>Universidad Laica Eloy Alfaro de Manabí| Todos los derechos reservados ©</h4>
+        </div>
+    </div>
+</body>
+
+</html>

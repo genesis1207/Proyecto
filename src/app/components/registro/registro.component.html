@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="registro.component.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="menu">
+            <div class="header">
+                <h1>Gestión de inventario de equipos informáticos</h1>
+                <div class="navegador">
+                    <ul>
+                        <li><a href="../inicio/">Inicio</a></li>
+                        <li><a href="../login/">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <form class="formulario" [formGroup]="myfar" (ngSubmit)="onSubmit()">
+
+                    <h2>Registrarse</h2>
+
+                    <label><strong>Nombre de Usuario:</strong></label> <br>
+                    <input class="form-control" type="text" formControlName="username">
+                    <span *ngIf="this.myfar.get('username')?.errors?.['required']" class="text-danger">
+                        <br>Los <strong>nombres</strong> no puede quedar vacío
+                    </span>
+                    <span *ngIf="this.myfar.get('username')?.errors?.['minlength']" class="text-danger">
+                        <br>Debe tener como <strong>mínimo</strong> 5 caracteres
+                    </span>
+                    <br><br>
+
+                    <div class="form-group">
+                        <label><strong>Apellido de Usuario:</strong></label> <br>
+                        <input class="form-control" type="text" formControlName="lastname">
+                        <span *ngIf="this.myfar.get('lastname')?.errors?.['required']" class="text-danger">
+                            <br>Los <strong>nombres</strong> no puede quedar vacío
+                        </span>
+                        <span *ngIf="this.myfar.get('lastname')?.errors?.['minlength']" class="text-danger">
+                            <br>Debe tener como <strong>mínimo</strong> 5 caracteres
+                        </span>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label><strong>Teléfono:</strong></label> <br>
+                        <input class="form-control" type="number" formControlName="phone" required>
+                        <span *ngIf="myfar.get('phone')?.errors?.['required']" class="text-danger">
+                            <br>El <strong>teléfono</strong> no puede quedar vacío.
+                        </span>
+                        <span *ngIf="myfar.get('phone')?.errors?.['pattern']" class="text-danger">
+                            <br>El <strong>teléfono</strong> debe tener 10 dígitos numéricos.
+                        </span>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <div class="form-input">
+                            <label><strong>Correo electrónico:</strong></label><br>
+                            <input class="form-control" type="email" class="form-control" formControlName="email"
+                                placeholder="example@gmail.com" required>
+                            <span *ngIf="this.myfar.get('email')?.errors?.['required']" class="text-danger">
+                                <br>El <strong>email</strong> no puede quedar vacío
+                            </span>
+                            <span *ngIf="this.myfar.get('email')?.errors?.['email']" class="text-danger">
+                                <br>El <strong>email</strong> no es válido
+                            </span>
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label><strong>Contraseña:</strong></label> <br>
+                        <input class="form-control" type="password" formControlName="password2">
+                        <span *ngIf="this.myfar.get('password2')?.errors?.['required']" class="text-danger">
+                            <br>Los <strong>contraseña</strong> no puede quedar vacía
+                        </span>
+                        <span *ngIf="this.myfar.get('password2')?.errors?.['minlength']" class="text-danger">
+                            <br>Debe tener como <strong>mínimo</strong> 6 caracteres
+                        </span>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label><strong>Repetir Contraseña:</strong></label> <br>
+                        <input class="form-control" type="password" formControlName="password3">
+                        <span *ngIf="this.myfar.get('password3')?.errors?.['required']" class="text-danger">
+                            <br>Los <strong>contraseña</strong> no puede quedar vacía
+                        </span>
+                        <span *ngIf="this.myfar.get('password3')?.errors?.['minlength']" class="text-danger">
+                            <br>Debe tener como <strong>mínimo</strong> 6 caracteres
+                        </span>
+                    </div>
+                    <br>
+                    <div class="button-container">
+                        <button type="submit" [disabled]="myfar.invalid">Guardar</button>
+                        <button type="submit" onclick="history.back()">Regresar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="break">
+            <div class="direccion">
+                <h4>Dirección:</h4>
+                <p>Av. Circunvalación, Manta</p>
+            </div>
+            <div class="contacto">
+                <h4>Contactos:</h4>
+                <p>Tel: +593 123456789</p>
+                <p>Email: info&#64;uleam.live.edu.ec</p>
+            </div>
+            <div class="sobre">
+                <h4>Sobre nosotros:</h4>
+                <p>Somos la Universidad Laica Eloy Alfaro de Manabí, contamos con servicio para la gestión de inventario
+                    informático</p>
+            </div>
+        </div>
+        <div class="derechos">
+            <h4>Universidad Laica Eloy Alfaro de Manabí | Todos los derechos reservados ©</h4>
+        </div>
+    </div>
+</body>
+
+</html>

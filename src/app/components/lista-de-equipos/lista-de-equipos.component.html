@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Equipos</title>
+    <link rel="stylesheet" href="lista-de-equipos.component.css">
+</head>
+<body>
+    <!--menu-->
+    <div class="menu">
+    <div class="header">
+        <h1 class="C">Gestión de inventario de equipos informáticos</h1>
+        <div class="navegador">
+            <ul>
+                <li><a href="../logueado/">Inicio</a></li>
+                <li><a href="../agregar-equipos/">Agregar Equipos</a></li>
+                <li><a href="../generar-reporte/">Reportes</a></li>
+                <li><a href="../contacto/">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+   </div> 
+   <h1>Lista de Equipos</h1>
+<input type="text" #searchInput placeholder="Buscar equipos..." (input)="searchEquipos(searchInput.value)">
+
+<table id="equipmentTable">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Número de Serie</th>
+        <th>Estado</th>
+        <th>Ubicación</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let equipo of equipos">
+        <td><a href="#" (click)="redirectToDetalle($event)">{{ equipo.nombre }}</a></td>
+        <td>{{ equipo.serial }}</td>
+        <td>{{ equipo.estado }}</td>
+        <td>{{ equipo.ubicacion }}</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

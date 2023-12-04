@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar Reporte</title>
+    <link rel="stylesheet" href="generar-reporte.component.css">
+</head>
+
+<body>
+    <!--menu-->
+    <div class="menu">
+        <div class="header">
+            <h1 class="W">Gestión de inventario de equipos informáticos</h1>
+            <div class="navegador">
+                <ul>
+                    <li><a href="../logueado/">Inicio</a></li>
+                    <li><a href="../lista-de-equipos/">Listado de Equipos</a></li>
+                    <li><a href="../agregar-equipos/">Agregar Equipos</a></li>
+                    <li><a href="../contacto/">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="N">Generar Reporte</h1>
+        <form #reportForm="ngForm" (ngSubmit)="generarReporte(reportForm)">
+            <div class="form-group">
+                <label for="equipmentID"><strong>ID del Equipo:</strong></label>
+                <input type="text" id="equipmentID" name="equipmentID" required [(ngModel)]="equipmentID">
+            </div>
+            <div class="form-group">
+                <label for="reportType"><strong>Tipo de Reporte:</strong></label>
+                <select id="reportType" name="reportType" required [(ngModel)]="reportType">
+                    <option value="mantenimiento"><strong>Mantenimiento</strong></option>
+                    <option value="estado"><strong>Estado</strong></option>
+                    <option value="asignacion"><strong>Asignación</strong></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="reportDescription"><strong>Descripción del Reporte:</strong></label>
+                <textarea id="reportDescription" name="reportDescription" rows="4" required
+                    [(ngModel)]="reportDescription"></textarea>
+            </div>
+            <button type="submit"><strong>Generar Reporte</strong></button>
+        </form>
+        <br>
+        <p id="error-message" *ngIf="formError" class="error-message">{{ formError }}</p>
+    </div>
+
+    <div class="report-table-container">
+        <h2>Lista de Reportes Generados</h2>
+        <table class="report-table">
+            <thead>
+                <tr>
+                    <th>ID del Equipo</th>
+                    <th>Tipo de Reporte</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let report of reportItems">
+                    <td>{{ report.equipmentID }}</td>
+                    <td>{{ report.reportType }}</td>
+                    <td>{{ report.reportDescription }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+<!--Pie de pagina-->
+<div class="footer">
+    <div class="break">
+        <div class="direccion">
+            <h4>Dirección:</h4>
+            <p>Av. Circunvalacion, Manta</p>
+        </div>
+        <div class="contacto">
+            <h4>Contactos:</h4>
+            <p>Tel: +593 123456789</p>
+            <p>Email: info@uleam.live.edu.ec</p>
+        </div>
+        <div class="sobre">
+            <h4>Sobre nosotros:</h4>
+            <p>Somos la Universidad Laica Eloy Alfaro de Manabí, contamos con servico para la gestion de inventario
+                informatico</p>
+        </div>
+    </div>
+    <div class="derechos">
+        <h4>Universidad Laica Eloy Alfaro de Manabí| Todos los derechos reservados ©</h4>
+    </div>
+</div>
+</html>

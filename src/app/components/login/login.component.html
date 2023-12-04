@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Usuario</title>
+    <link rel="stylesheet" href="login.component.css">
+</head>
+
+<body>
+    <!--menu-->
+    <div class="menu">
+        <div class="header">
+            <h1>Gestión de inventario de equipos informáticos</h1>
+            <div class="navegador">
+                <ul>
+                    <li><a href="../inicio/">Inicio</a></li>
+                    <li><a href="../registro/">Registro</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="wrap">
+        <div class="Regisration">
+            <div class="Regisration-head">
+                <h2>Iniciar Sesión</h2>
+            </div>
+            <form class="formulario" [formGroup]="myfa" (ngSubmit)="onSubmit()">
+                <div class="input-group Correo">
+                    <input class="form-control" type="email" formControlName="email" placeholder="Correo electrónico"
+                        required>
+                    <span *ngIf="this.myfa.get('email')?.errors?.['required']" class="text-danger">
+                        <br>El <strong>Correo</strong> no puede quedar vacío
+                    </span>
+                    <span *ngIf="this.myfa.get('email')?.errors?.['minlength']" class="text-danger">
+                        <br>Debe tener como <strong>mínimo</strong> 10 caracteres
+                    </span>
+                    <br>
+                </div>
+                <br>
+                <div class="input-group Contraseña">
+                    <input class="form-control" type="password" formControlName="password" placeholder="Contraseña"
+                        required>
+                    <span *ngIf="this.myfa.get('password')?.errors?.['required']" class="text-danger">
+                        <br>La <strong>contraseña</strong> no puede quedar vacía
+                    </span>
+                    <span *ngIf="this.myfa.get('password')?.errors?.['minlength']" class="text-danger">
+                        <br>Debe tener como <strong>mínimo</strong> 6 caracteres
+                    </span>
+                </div>
+                <br>
+
+                <div class="submit">
+                    <input type="submit" value="Ingresar">
+                </div>
+                <h3 class="correcto"></h3>
+            </form>
+        </div>
+    </div>
+    <br>
+    <!--Pie de pagina-->
+    <div class="footer">
+        <div class="break">
+            <div class="direccion">
+                <h4>Dirección:</h4>
+                <p>Av. Circunvalacion, Manta</p>
+            </div>
+            <div class="contacto">
+                <h4>Contactos:</h4>
+                <p>Tel: +593 123456789</p>
+                <p>Email: info&#64;uleam.live.edu.ec</p>
+            </div>
+            <div class="sobre">
+                <h4>Sobre nosotros:</h4>
+                <p>Somos la Universidad Laica Eloy Alfaro de Manabí, contamos con servico para la gestion de inventario
+                    informatico</p>
+            </div>
+        </div>
+        <div class="derechos">
+            <h4>Universidad Laica Eloy Alfaro de Manabí| Todos los derechos reservados ©</h4>
+        </div>
+    </div>
+</body>
+</html>
